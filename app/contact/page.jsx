@@ -5,20 +5,20 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
 
-import { 
-  Select, 
-  SelectContent, 
-  SelectGroup, 
-  SelectItem, 
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
   SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
 
-import { 
-  FaPhoneAlt, 
-  FaEnvelope, 
-  FaMapMarkerAlt 
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt
 } from "react-icons/fa";
 
 const info = [
@@ -41,7 +41,7 @@ const info = [
 
 const Contact = () => {
   return (
-    <motion.section 
+    <motion.section
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
@@ -75,9 +75,12 @@ const Contact = () => {
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Web Develoment</SelectItem>
-                    <SelectItem value="cst">UI/UX Design</SelectItem>
-                    <SelectItem value="mst">Logo Design</SelectItem>
+                    <SelectItem value="fe-dev">Front-End Development</SelectItem>
+                    <SelectItem value="be-dev">Back-End Development</SelectItem>
+                    <SelectItem value="fs-dev">Full-Stack Website Development</SelectItem>
+                    <SelectItem value="api-dev">API Development and Integration</SelectItem>
+                    <SelectItem value="db-design">Database Design and Management</SelectItem>
+                    <SelectItem value="web-maint">Website Maintenance and Optimization</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
@@ -85,7 +88,7 @@ const Contact = () => {
               {/* textarea */}
               <Textarea
                 className="h-[200px]"
-                placeholder="Type your message here." 
+                placeholder="Type your message here."
               />
 
               {/* button */}
@@ -94,7 +97,7 @@ const Contact = () => {
           </div>
 
           {/* info */}
-          <div 
+          <div
             className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0"
           >
             <ul className="flex flex-col gap-10">

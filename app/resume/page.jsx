@@ -1,11 +1,21 @@
 "use client";
 
-import { 
-  FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs 
+import {
+  FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs
 } from "react-icons/fa";
 
-import { 
-  SiTailwindcss, SiNextdotjs
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiPython,
+  SiDocker,
+  SiPostgresql,
+  SiDjango,
+  SiBootstrap,
+  SiTypescript,
+  SiGit,
+  SiGithubactions,
+  SiTensorflow
 } from "react-icons/si";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -22,11 +32,11 @@ import { motion } from "framer-motion";
 
 const about = {
   title: "About me",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet est vitae metus imperdiet volutpat. Nunc mattis viverra tellus non rhoncus. Quisque varius massa non odio accumsan cursus. Quisque et posuere sem. Pellentesque ut ex semper, convallis felis a, facilisis ligula. Aliquam eu elit non urna auctor commodo. Pellentesque eu diam in dui auctor varius et vel eros. Suspendisse sit amet est et purus placerat cursus.",
+  description: "As a software engineer with a deep passion for audio technology and machine learning, I bring a unique blend of theoretical knowledge and practical experience to every project.\n\nIn recent years, I've dedicated myself to deepening my skills in full-stack development, design patterns, and object-oriented programming. This continuous learning journey has equipped me with strong problem-solving abilities and technical adaptability, proven through various complex projects.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Luke Coleman"
+      fieldValue: "Hung Lin"
     },
     {
       fieldName: "Phone",
@@ -63,17 +73,17 @@ const about = {
 const experience = {
   icons: "/assets/resume/badge.svg",
   title: "My experience",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet est vitae metus imperdiet volutpat. Nunc mattis viverra tellus non rhoncus. Quisque varius massa non odio accumsan cursus. Quisque et posuere sem. Pellentesque ut ex semper, convallis felis a, facilisis ligula. Aliquam eu elit non urna auctor commodo. Pellentesque eu diam in dui auctor varius et vel eros. Suspendisse sit amet est et purus placerat cursus.",
+  description: "Experienced software engineer with three years of professional background in audio algorithms and machine learning. \n\nFollowing three years of work in audio processing, dedicated four years to deepening full-stack development skills, as well as design patterns and object-oriented programming techniques. Demonstrated strong problem-solving abilities and technical adaptability through multiple complex projects.",
   items: [
     {
-      company: "Tech Solutions Inc.",
-      position: "Software Engineer",
-      duration: "2021 - Present",
+      company: "UnlimiterHear Co., Ltd",
+      position: "Machine Learning Engineer",
+      duration: "2019 - 2020",
     },
     {
-      company: "E-commerce Startup.",
-      position: "Freelance Web Deb Developer",
-      duration: "2019 - 2021",
+      company: "UnlimiterHear Co., Ltd",
+      position: "Software Engineer",
+      duration: "2017 - 2019",
     },
   ]
 };
@@ -81,16 +91,16 @@ const experience = {
 const education = {
   icons: "/assets/resume/cap.svg",
   title: "My education",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet est vitae metus imperdiet volutpat. Nunc mattis viverra tellus non rhoncus. Quisque varius massa non odio accumsan cursus. Quisque et posuere sem. Pellentesque ut ex semper, convallis felis a, facilisis ligula. Aliquam eu elit non urna auctor commodo. Pellentesque eu diam in dui auctor varius et vel eros. Suspendisse sit amet est et purus placerat cursus.",
+  description: "My academic background that laid the foundation for my career in technology and engineering.",
   items: [
     {
       institution: "National Taiwan University",
-      degree: "Master of Photo Electronics",
+      degree: "Master in Photonic and Electronics",
       duration: "2013 - 2015",
     },
     {
       institution: "National Tsing Hua University",
-      degree: "Bachelor of Physics",
+      degree: "Bachelor in Physics",
       duration: "2009 - 2013",
     },
   ]
@@ -98,7 +108,7 @@ const education = {
 
 const skills = {
   title: "My skills",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet est vitae metus imperdiet volutpat. Nunc mattis viverra tellus non rhoncus. Quisque varius massa non odio accumsan cursus. Quisque et posuere sem. Pellentesque ut ex semper, convallis felis a, facilisis ligula. Aliquam eu elit non urna auctor commodo. Pellentesque eu diam in dui auctor varius et vel eros. Suspendisse sit amet est et purus placerat cursus.",
+  description: "A comprehensive overview of my technical expertise and professional capabilities.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -113,6 +123,10 @@ const skills = {
       name: "javascript",
     },
     {
+      icon: <SiTypescript />,
+      name: "typescript",
+    },
+    {
       icon: <FaReact />,
       name: "react.js",
     },
@@ -125,23 +139,51 @@ const skills = {
       name: "tailwind.css",
     },
     {
+      icon: <SiBootstrap />,
+      name: "bootstrap",
+    },
+    {
       icon: <FaNodeJs />,
       name: "node.js",
     },
     {
-      icon: <FaFigma />,
-      name: "figma",
+      icon: <SiPython />,
+      name: "python",
+    },
+    {
+      icon: <SiDjango />,
+      name: "django",
+    },
+    {
+      icon: <SiTensorflow />,
+      name: "tensorflow",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "postgresql",
+    },
+    {
+      icon: <SiDocker />,
+      name: "docker",
+    },
+    {
+      icon: <SiGit />,
+      name: "git",
+    },
+    {
+      icon: <SiGithubactions />,
+      name: "github actions",
     },
   ]
 };
 
 const Resume = () => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: {delay: 2.4, duration: 0.4, ease: "easeIn"}
+        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" }
       }}
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
@@ -150,7 +192,7 @@ const Resume = () => {
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
-          <TabsList 
+          <TabsList
             className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6"
           >
             <TabsTrigger value="experience">Experience</TabsTrigger>
@@ -165,13 +207,18 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-600px">{experience.description}</p>
+                <p
+                  className="max-w-600px text-white/60"
+                  style={{ whiteSpace: "pre-line" }}
+                >
+                  {experience.description}
+                </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
                       return (
-                        <li 
-                          key={index} 
+                        <li
+                          key={index}
                           className="bg-[#232329] h-[184px] py-6 px-10  rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
@@ -195,13 +242,13 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-600px">{education.description}</p>
+                <p className="max-w-600px text-white/60">{education.description}</p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => {
                       return (
-                        <li 
-                          key={index} 
+                        <li
+                          key={index}
                           className="bg-[#232329] h-[184px] py-6 px-10  rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
@@ -255,10 +302,13 @@ const Resume = () => {
             <TabsContent value="about" className="w-full text-center xl:text-left">
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p
+                  className="max-w-[600px] text-white/60 mx-auto xl:mx-0"
+                  style={{ whiteSpace: "pre-line" }}
+                >
                   {about.description}
                 </p>
-              
+
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
